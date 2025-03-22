@@ -11,38 +11,23 @@
             align-items: center;
             height:100vh;
             margin:0;
-            background-color: #f4f4f4;
+            background-color: #5c3a9e;
+        }
+        .clock{
+            height:50px;
+            width: 150px;
+            background-color: rgb(120,200,80);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            size:50px;
         }
     </style>
 </head>
 <body>
+    
     <div class="clock" id="clock"></div>
-    <script>
-        function updateClock(){
-            const now=new Date();
-            let hours=now.getHours();
-            const minutes=now.getMinutes().toString.padstart(2,'0');
-            const seconds=now.getSeconds().toString.padstart(2,'0');
-            
-            //Convert it 12 hours format and determine AM/PM
-            const ampm=hours>=12? 'PM':'AM';
-            hours= hours %12 || 12; //Convert hour "0" to "12" for 12 hour format
-
-
-            //Format the time string
-            const timeString=`${hours.toString().padStart(2,'0')}:${minutes}:${seconds} ${ampm}`
-          
-            //Update the DOM
-            document.getElementById('clock').textContent=timeString;
-
-        }
-
-        //Call updateClock every second
-        setInterval(updateClock,1000);
-
-        //Initial call to display the time immediately on page load
-        updateClock();
-    </script>
+    <script src="script.js"></script>
     
 </body>
 </html>
