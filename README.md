@@ -1,2 +1,2 @@
 # Digital-Clock
-It is a Digital Clock using javascript
+It is a Digital Clock using javascript .
